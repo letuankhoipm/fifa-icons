@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -18,10 +18,32 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"],
+    "paths": {
+      "@modals/*": ["app/modals/*"],
+      "@models/*": ["app/models/*"],
+      "@layouts/*": ["app/layouts/*"],
+      "@core/*": ["app/core/*"],
+      "@services/*": ["app/services/*"],
+      "@routes/*": ["app/routes/*"],
+      "@shared/*": ["app/shared/*"],
+      "@modules/*": ["app/modules/*"],
+      "@components/*": ["app/components/*"],
+      "@utils/*": ["app/utils/*"],
+      "@config/*": ["config/*"],
+      "@libs/*": ["libraries/*"],
+      "@env/*": ["environments/*"],
+      "@testing/*": ["testing/*"],
+      "@pipes/*": ["app/pipes/*"],
+      "@constants/*": ["app/constants/*"],
+      "@enums/*": ["app/enums/*"],
+      "@redux/*": ["app/redux/*"],
+      "@guards/*": ["app/guards/*"],
+      "@directives/*": ["app/directives/*"],
+      "@graphql/*": ["app/graphql/*"],
+      "@generated/*": ["generated/*"]
+    },
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
