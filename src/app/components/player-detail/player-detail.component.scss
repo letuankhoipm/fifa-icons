@@ -1,0 +1,61 @@
+.player-detail {
+  padding: 20px;
+  height: 650px;
+
+  .close-icon {
+    width: 17px;
+  }
+
+  .season-icon {
+    width: 40px;
+  }
+
+  .flag {
+    height: 20px;
+    width: 30px;
+    object-fit: cover;
+  }
+
+  .player-img {
+    height: 175px;
+  }
+
+  .nav-tab {
+    border-radius: 0px;
+    padding: 3px 30px;
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .shirt {
+    height: 200px;
+    width: 200px;
+    background: url("../../../assets/images/black.png");
+    background-size: cover;
+    font-family: "Teko", sans-serif;
+
+    span {
+      font-size: 7rem;
+    }
+  }
+
+  .trait {
+    height: 50px;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

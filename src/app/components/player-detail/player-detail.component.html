@@ -1,0 +1,254 @@
+<div class="player-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-end align-self-center">
+        <button class="btn btn-light">
+          <img
+            class="close-icon"
+            src="assets/icons/times.svg"
+            alt="close_icon"
+          />
+        </button>
+      </div>
+      <div class="my-2"></div>
+      <div class="col-6 general-info">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 p-0 d-flex align-self-end">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 p-0 my-4">
+                    <div class="d-flex align-self-center">
+                      <!-- <img
+                        class="season-icon"
+                        src="assets/images/icons.png"
+                        alt="season_icon"
+                      /> -->
+                      <img
+                        class="season-icon"
+                        src="assets/images/season.png"
+                        alt="season_icon"
+                      />
+                      <h4 class="m-0 d-flex align-self-center px-2 fw-bold">
+                        Ruud van Nistelrooy
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="col-4 p-0 position">
+                    <span class="">
+                      <strong class="text-striker text-danger fs-4">ST</strong>
+                      <strong class="fs-3 mx-2">110</strong>
+                    </span>
+                  </div>
+                  <div class="col-8 p-0 nationality d-flex align-self-center">
+                    <span class="d-flex align-self-center">
+                      <span class="text-striker fs-4">
+                        <img
+                          class="flag"
+                          src="assets/flags/NL.svg"
+                          alt="flags"
+                        />
+                      </span>
+                      <span class="fs-5 mx-2 d-flex align-self-end"
+                        >Netherland</span
+                      >
+                    </span>
+                  </div>
+                  <div class="col-12 p-0 my-2 statima d-flex align-self-center">
+                    <span class="fs-5">183cm</span>
+                    <span class="mx-4 fs-5">72kg</span>
+                    <span class="fs-5 fw-bold">5 | 5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 p-0">
+              <img
+                class="player-img"
+                src="assets/images/van_nistelrooy.png"
+                alt="img"
+              />
+            </div>
+            <hr />
+            <div class="col-12 p-0">
+              <ul
+                ngbNav
+                #generalInfoNav="ngbNav"
+                [(activeId)]="active"
+                class="nav-tabs"
+              >
+                <li [ngbNavItem]="1">
+                  <a class="nav-tab" ngbNavLink>General</a>
+                  <ng-template ngbNavContent>
+                    <div class="mt-2">
+                      <hr />
+                      <div class="d-flex justify-content-between">
+                        <span>Birthday</span>
+                        <span class="fw-bold">11/11/1974</span>
+                      </div>
+                      <hr />
+                      <div class="d-flex justify-content-between">
+                        <span>Reputation</span>
+                        <span class="fw-bold">Legendary</span>
+                      </div>
+                      <hr />
+                      <div class="d-flex justify-content-between">
+                        <span>Skills</span>
+                        <ngb-rating
+                          [max]="5"
+                          [rate]="5"
+                          [readonly]="true"
+                        ></ngb-rating>
+                      </div>
+                      <hr />
+                      <div class="d-flex justify-content-between">
+                        <span class="d-flex align-self-center">Traits</span>
+                        <div class="fw-bold">
+                          <img
+                            class="trait"
+                            src="assets/traits/trait_icon_22.png"
+                            alt="traits"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                  <a class="nav-tab" ngbNavLink>Biography</a>
+                  <ng-template ngbNavContent>
+                    <div class="text-justify">
+                      <h5 class="fw-bold">Brief Information</h5>
+                      <p>
+                        Rutgerus Johannes Martinus van Nistelrooij (anglicised
+                        to Van Nistelrooy; born 1 July 1976) is a Dutch
+                        professional football coach and former player. He is
+                        currently the coach of PSV Eindhoven. A former
+                        footballer, Van Nistelrooy is often considered one of
+                        the best strikers of all time.
+                      </p>
+                    </div>
+                    <hr />
+                    <div class="text-justify">
+                      <h5 class="fw-bold">Honours</h5>
+                      <p>
+                        Rutgerus Johannes Martinus van Nistelrooij (anglicised
+                        to Van Nistelrooy; born 1 July 1976) is a Dutch
+                        professional football coach and former player. He is
+                        currently the coach of PSV Eindhoven. A former
+                        footballer, Van Nistelrooy is often considered one of
+                        the best strikers of all time.
+                      </p>
+                    </div>
+                    <hr />
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                  <a class="nav-tab" ngbNavLink>Shirt No.</a>
+                  <ng-template ngbNavContent>
+                    <div
+                      class="d-flex justify-content-center align-self-center"
+                      style="height: 315px"
+                    >
+                      <div
+                        class="shirt d-flex justify-content-center align-self-center"
+                      >
+                        <span class="d-flex align-self-center text-white"
+                          >10</span
+                        >
+                      </div>
+                    </div>
+                  </ng-template>
+                </li>
+              </ul>
+              <div
+                [ngbNavOutlet]="generalInfoNav"
+                class="mt-2 nav-content"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 statis-info">
+        <ul
+          ngbNav
+          #nav="ngbNav"
+          [(activeId)]="activeAttribute"
+          class="nav-tabs"
+        >
+          <li [ngbNavItem]="1">
+            <a class="nav-tab" ngbNavLink>Overall</a>
+            <ng-template ngbNavContent>
+              <hr />
+              <div style="height: 480px" class="player-attr overflow-auto">
+                <div class="d-flex justify-content-between">
+                  <span class="d-flex align-self-end">Reputation</span>
+                  <span class="fw-bold fs-5 px-4">110</span>
+                </div>
+                <hr />
+              </div>
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="2">
+            <a class="nav-tab" ngbNavLink>Attack</a>
+            <ng-template ngbNavContent>
+              <hr />
+              <p>
+                Exercitation +1 labore velit, blog sartorial PBR leggings next
+                level wes anderson artisan four loko farm-to-table craft beer
+                twee. Qui photo booth letterpress, commodo enim craft beer
+                mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo
+                nostrud organic, assumenda labore aesthetic magna delectus
+                mollit. Keytar helvetica VHS salvia yr, vero magna velit
+                sapiente labore stumptown. Vegan fanny pack odio cillum wes
+                anderson 8-bit, sustainable jean shorts beard ut DIY ethical
+                culpa terry richardson biodiesel. Art party scenester stumptown,
+                tumblr butcher vero sint qui sapiente accusamus tattooed echo
+                park.
+              </p>
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="3">
+            <a class="nav-tab" ngbNavLink>Defense</a>
+            <ng-template ngbNavContent>
+              <p>
+                Sed commodo, leo at suscipit dictum, quam est porttitor sapien,
+                eget sodales nibh elit id diam. Nulla facilisi. Donec egestas
+                ligula vitae odio interdum aliquet. Duis lectus turpis, luctus
+                eget tincidunt eu, congue et odio. Duis pharetra et nisl at
+                faucibus. Quisque luctus pulvinar arcu, et molestie lectus
+                ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat
+                volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus
+                nisl enim, nec tristique ipsum euismod facilisis. Morbi ut
+                bibendum est, eu tincidunt odio. Orci varius natoque penatibus
+                et magnis dis parturient montes, nascetur ridiculus mus. Mauris
+                aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus
+                nec tortor vel tellus pulvinar feugiat.
+              </p>
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="4">
+            <a class="nav-tab" ngbNavLink>Goalkeeper</a>
+            <ng-template ngbNavContent>
+              <p>
+                Sed commodo, leo at suscipit dictum, quam est porttitor sapien,
+                eget sodales nibh elit id diam. Nulla facilisi. Donec egestas
+                ligula vitae odio interdum aliquet. Duis lectus turpis, luctus
+                eget tincidunt eu, congue et odio. Duis pharetra et nisl at
+                faucibus. Quisque luctus pulvinar arcu, et molestie lectus
+                ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat
+                volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus
+                nisl enim, nec tristique ipsum euismod facilisis. Morbi ut
+                bibendum est, eu tincidunt odio. Orci varius natoque penatibus
+                et magnis dis parturient montes, nascetur ridiculus mus. Mauris
+                aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus
+                nec tortor vel tellus pulvinar feugiat.
+              </p>
+            </ng-template>
+          </li>
+        </ul>
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
