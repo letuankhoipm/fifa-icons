@@ -1,0 +1,578 @@
+<div class="rh-worklist p-4">
+  <div class="container-fluid p-0">
+    <div class="col-12">
+      <button (click)="onSave()" class="btn btn-primary">
+        <i class="fas fa-save"></i>
+        Save
+      </button>
+      <button
+        [routerLink]="['/admin/rooms-management']"
+        class="btn btn-secondary mx-4"
+      >
+        <i class="fas fa-times"></i>
+        Cancel
+      </button>
+    </div>
+    <hr />
+
+    <form [formGroup]="playerForm">
+      <div class="col-12 p-0">
+        <div class="container-fluid px-0">
+          <div class="row">
+            <div class="col-4">
+              <div style="height: 800px" class="overflow-auto">
+                <div class="form-group my-4">
+                  <label for="name">name</label>
+                  <input
+                    type="text"
+                    formControlName="name"
+                    class="form-control"
+                    id="name"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="position">position</label>
+                  <input
+                    type="text"
+                    formControlName="position"
+                    class="form-control"
+                    id="position"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="overall">overall</label>
+                  <input
+                    type="number"
+                    formControlName="overall"
+                    class="form-control"
+                    id="overall"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="nationality">nationality</label>
+                  <input
+                    type="text"
+                    formControlName="nationality"
+                    class="form-control"
+                    id="nationality"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="flag">flag</label>
+                  <input
+                    type="text"
+                    formControlName="flag"
+                    class="form-control"
+                    id="flag"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="height">height</label>
+                  <input
+                    type="text"
+                    formControlName="height"
+                    class="form-control"
+                    id="height"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="weight">weight</label>
+                  <input
+                    type="text"
+                    formControlName="weight"
+                    class="form-control"
+                    id="weight"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="rightFoot">rightFoot</label>
+                  <input
+                    type="text"
+                    formControlName="rightFoot"
+                    class="form-control"
+                    id="rightFoot"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="leftFoot">leftFoot</label>
+                  <input
+                    type="text"
+                    formControlName="leftFoot"
+                    class="form-control"
+                    id="leftFoot"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="birthday">birthday</label>
+                  <input
+                    type="text"
+                    formControlName="birthday"
+                    class="form-control"
+                    id="birthday"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="reputation">reputation</label>
+                  <input
+                    type="text"
+                    formControlName="reputation"
+                    class="form-control"
+                    id="reputation"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="skills">skills</label>
+                  <input
+                    type="text"
+                    formControlName="skills"
+                    class="form-control"
+                    id="skills"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="traits">traits</label>
+                  <input
+                    type="text"
+                    formControlName="traits"
+                    class="form-control"
+                    id="traits"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="briefInfo">briefInfo</label>
+                  <input
+                    type="text"
+                    formControlName="briefInfo"
+                    class="form-control"
+                    id="briefInfo"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="honours">honours</label>
+                  <input
+                    type="text"
+                    formControlName="honours"
+                    class="form-control"
+                    id="honours"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="shirtNumber">shirtNumber</label>
+                  <input
+                    type="text"
+                    formControlName="shirtNumber"
+                    class="form-control"
+                    id="shirtNumber"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div style="height: 800px" class="overflow-auto">
+                <div class="form-group my-4">
+                  <label for="acceleration">acceleration</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="acceleration"
+                    class="form-control"
+                    id="acceleration"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="sprintSpeed">sprintSpeed</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="sprintSpeed"
+                    class="form-control"
+                    id="sprintSpeed"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="dribbling">dribbling</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="dribbling"
+                    class="form-control"
+                    id="dribbling"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="ballControl">ballControl</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="ballControl"
+                    class="form-control"
+                    id="ballControl"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="shortPassing">shortPassing</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="shortPassing"
+                    class="form-control"
+                    id="shortPassing"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="finishing">finishing</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="finishing"
+                    class="form-control"
+                    id="finishing"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="ballControl">shotPower</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="shotPower"
+                    class="form-control"
+                    id="shotPower"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="heading">heading</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="heading"
+                    class="form-control"
+                    id="heading"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="longShots">longShots</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="longShots"
+                    class="form-control"
+                    id="longShots"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="positioning">positioning</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="positioning"
+                    class="form-control"
+                    id="positioning"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="vision">vision</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="vision"
+                    class="form-control"
+                    id="vision"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="reactions">reactions</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="reactions"
+                    class="form-control"
+                    id="reactions"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="volleys">volleys</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="volleys"
+                    class="form-control"
+                    id="volleys"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="penalties">penalties</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="penalties"
+                    class="form-control"
+                    id="penalties"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="crossing">crossing</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="crossing"
+                    class="form-control"
+                    id="crossing"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="freeKick">freeKick</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="freeKick"
+                    class="form-control"
+                    id="freeKick"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="curve">curve</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="curve"
+                    class="form-control"
+                    id="curve"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="agility">agility</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="agility"
+                    class="form-control"
+                    id="agility"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="balance">balance</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="balance"
+                    class="form-control"
+                    id="balance"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="marking">marking</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="marking"
+                    class="form-control"
+                    id="marking"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="standingTackle">standingTackle</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="standingTackle"
+                    class="form-control"
+                    id="standingTackle"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="interceptions">interceptions</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="interceptions"
+                    class="form-control"
+                    id="interceptions"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="slidingTackle">slidingTackle</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="slidingTackle"
+                    class="form-control"
+                    id="slidingTackle"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="strength">strength</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="strength"
+                    class="form-control"
+                    id="strength"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="stamina">stamina</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="stamina"
+                    class="form-control"
+                    id="stamina"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="aggression">aggression</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="aggression"
+                    class="form-control"
+                    id="aggression"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="jumping">jumping</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="jumping"
+                    class="form-control"
+                    id="jumping"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="composure">composure</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="composure"
+                    class="form-control"
+                    id="composure"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="gkDiving">gkDiving</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="gkDiving"
+                    class="form-control"
+                    id="gkDiving"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="gkHandling">gkHandling</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="gkHandling"
+                    class="form-control"
+                    id="gkHandling"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="gkKicking">gkKicking</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="gkKicking"
+                    class="form-control"
+                    id="gkKicking"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="gkReflexes">gkReflexes</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="gkReflexes"
+                    class="form-control"
+                    id="gkReflexes"
+                  />
+                </div>
+
+                <div class="form-group my-4">
+                  <label for="gkPositioning">gkPositioning</label>
+                  <input
+                    type="number"
+                    max="100"
+                    formControlName="gkPositioning"
+                    class="form-control"
+                    id="gkPositioning"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group my-4">
+                <label for="img">Image</label>
+                <input
+                  id="img"
+                  type="file"
+                  (change)="onProcessingFile($event)"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group my-4">
+                <label for="preview">Preview Image</label>
+                <hr />
+                <p>
+                  <img
+                    class="preview-img"
+                    [src]="imgSrc.value"
+                    alt="Image to preview"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -29,8 +29,7 @@
 
   .shirt {
     height: 200px;
-    width: 200px;
-    background: url("../../../assets/images/black.png");
+    width: 230px;
     background-size: cover;
     font-family: "Teko", sans-serif;
 
@@ -44,6 +43,10 @@
   }
   ::-webkit-scrollbar {
     width: 7px;
+  }
+
+  .shirt-number {
+    padding-top: 20px;
   }
 
   ::-webkit-scrollbar-track {

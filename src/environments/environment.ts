@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyBcZT7XWwE83gZnnVeFfT3FfjwYnIuAaok',
+    authDomain: 'fifa-icons.firebaseapp.com',
+    projectId: 'fifa-icons',
+    storageBucket: 'fifa-icons.appspot.com',
+    messagingSenderId: '875964961103',
+    appId: '1:875964961103:web:504ef3553a77b53ffd353a',
+  },
 };
 
 /*

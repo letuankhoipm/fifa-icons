@@ -8,6 +8,13 @@ const routes: Routes = [
     path: ' ',
     component: AdminComponent,
   },
+  {
+    path: 'create-player',
+    loadChildren: () =>
+      import('@routes/create-player/create-player.module').then(
+        (mod) => mod.CreatePlayerModule
+      ),
+  },
 ];
 
 @NgModule({

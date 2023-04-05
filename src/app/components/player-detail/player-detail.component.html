@@ -26,18 +26,20 @@
                       /> -->
                       <img
                         class="season-icon"
-                        src="assets/images/season.png"
+                        src="assets/images/mu.png"
                         alt="season_icon"
                       />
                       <h4 class="m-0 d-flex align-self-center px-2 fw-bold">
-                        Ruud van Nistelrooy
+                        {{ playerDetail?.name }}
                       </h4>
                     </div>
                   </div>
                   <div class="col-4 p-0 position">
                     <span class="">
                       <strong class="text-striker text-danger fs-4">ST</strong>
-                      <strong class="fs-3 mx-2">110</strong>
+                      <strong class="fs-3 mx-2">
+                        {{ playerDetail?.overall }}
+                      </strong>
                     </span>
                   </div>
                   <div class="col-8 p-0 nationality d-flex align-self-center">
@@ -45,29 +47,35 @@
                       <span class="text-striker fs-4">
                         <img
                           class="flag"
-                          src="assets/flags/NL.svg"
+                          [src]="'assets/flags/' + playerDetail?.flag + '.svg'"
                           alt="flags"
                         />
                       </span>
-                      <span class="fs-5 mx-2 d-flex align-self-end"
-                        >Netherland</span
-                      >
+                      <span class="fs-5 mx-2 d-flex align-self-end">
+                        {{ playerDetail?.nationality }}
+                      </span>
                     </span>
                   </div>
                   <div class="col-12 p-0 my-2 statima d-flex align-self-center">
-                    <span class="fs-5">183cm</span>
-                    <span class="mx-4 fs-5">72kg</span>
-                    <span class="fs-5 fw-bold">5 | 5</span>
+                    <span class="fs-5">
+                      {{ playerDetail?.height }}
+                      cm</span
+                    >
+                    <span class="mx-4 fs-5">
+                      {{ playerDetail?.weight }}
+                      kg</span
+                    >
+                    <span class="fs-5 fw-bold">
+                      {{ playerDetail?.leftFoot }}
+                      |
+                      {{ playerDetail?.rightFoot }}
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-4 p-0">
-              <img
-                class="player-img"
-                src="assets/images/van_nistelrooy.png"
-                alt="img"
-              />
+              <img class="player-img" [src]="playerDetail?.imgSrc" alt="img" />
             </div>
             <hr />
             <div class="col-12 p-0">
@@ -84,19 +92,23 @@
                       <hr />
                       <div class="d-flex justify-content-between">
                         <span>Birthday</span>
-                        <span class="fw-bold">11/11/1974</span>
+                        <span class="fw-bold">
+                          {{ playerDetail?.birthday }}
+                        </span>
                       </div>
                       <hr />
                       <div class="d-flex justify-content-between">
                         <span>Reputation</span>
-                        <span class="fw-bold">Legendary</span>
+                        <span class="fw-bold">
+                          {{ playerDetail?.reputation }}
+                        </span>
                       </div>
                       <hr />
                       <div class="d-flex justify-content-between">
                         <span>Skills</span>
                         <ngb-rating
                           [max]="5"
-                          [rate]="5"
+                          [rate]="playerDetail?.skills || 0"
                           [readonly]="true"
                         ></ngb-rating>
                       </div>
@@ -120,24 +132,14 @@
                     <div class="text-justify">
                       <h5 class="fw-bold">Brief Information</h5>
                       <p>
-                        Rutgerus Johannes Martinus van Nistelrooij (anglicised
-                        to Van Nistelrooy; born 1 July 1976) is a Dutch
-                        professional football coach and former player. He is
-                        currently the coach of PSV Eindhoven. A former
-                        footballer, Van Nistelrooy is often considered one of
-                        the best strikers of all time.
+                        {{ playerDetail?.briefInfo }}
                       </p>
                     </div>
                     <hr />
                     <div class="text-justify">
                       <h5 class="fw-bold">Honours</h5>
                       <p>
-                        Rutgerus Johannes Martinus van Nistelrooij (anglicised
-                        to Van Nistelrooy; born 1 July 1976) is a Dutch
-                        professional football coach and former player. He is
-                        currently the coach of PSV Eindhoven. A former
-                        footballer, Van Nistelrooy is often considered one of
-                        the best strikers of all time.
+                        {{ playerDetail?.honours }}
                       </p>
                     </div>
                     <hr />
@@ -151,11 +153,17 @@
                       style="height: 315px"
                     >
                       <div
+                        [style.background-image]="
+                          'url(../../../assets/uniforms/SVG/' +
+                          playerDetail?.flag +
+                          '.svg' +
+                          ')'
+                        "
                         class="shirt d-flex justify-content-center align-self-center"
                       >
-                        <span class="d-flex align-self-center text-white"
-                          >10</span
-                        >
+                        <span class="d-flex shirt-number align-self-center">
+                          {{ playerDetail?.shirtNumber }}
+                        </span>
                       </div>
                     </div>
                   </ng-template>

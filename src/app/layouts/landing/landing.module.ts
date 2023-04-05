@@ -10,6 +10,13 @@ const routes: Routes = [
     path: ' ',
     component: LandingComponent,
   },
+  {
+    path: 'list-players',
+    loadChildren: () =>
+      import('@routes/list-players/list-players.module').then(
+        (mod) => mod.ListPlayersModule
+      ),
+  },
 ];
 
 @NgModule({
